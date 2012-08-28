@@ -33,7 +33,7 @@ A distributed, highly available, RESTful search engine
 true
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %{__mkdir} -p %{buildroot}%{_javadir}/%{name}/bin
 %{__install} -p -m 755 bin/elasticsearch %{buildroot}%{_javadir}/%{name}/bin
@@ -97,7 +97,7 @@ if [ $1 -eq 0 ]; then
 fi
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
